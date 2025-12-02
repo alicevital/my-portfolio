@@ -82,15 +82,15 @@ body {
 
 h1 {
     font-size: 3.0rem;
-    color: var(--secundaria);
     font-weight: bold;
     margin: 18px;
+    color: #fff;
 
 }
 
 .subtitulo {
     font-size: 2rem;
-    color: #4f46e5;
+    color: #ccc;
 }
 
 .sobre {
@@ -103,7 +103,9 @@ h1 {
 
 .sobre-titulo {
     font-size: 2.5rem;
-    color: var(--claro);
+    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-clip: text;
+    color: transparent;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -119,7 +121,7 @@ h1 {
 }
 
 .sobre-paragrafo {
-    color: ghostwhite;
+    color: #ccc;
     text-align: justify;
     font-size: 1.0rem;
 }
@@ -138,6 +140,9 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 35px;
+    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-clip: text;
+    color: transparent;
 }
 
 .projetos-card:hover {
@@ -182,6 +187,9 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 35px;
+    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-clip: text;
+    color: transparent;
 }
 
 .formulario-contato {
@@ -254,6 +262,9 @@ h1 {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 35px;
+    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-clip: text;
+    color: transparent;
 }
 
 .tec-caixa {
