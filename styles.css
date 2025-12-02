@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 html {
@@ -97,6 +97,10 @@ h1 {
     padding: 6rem 2rem;
 }
 
+.tecnologias {
+    padding: 6rem 2rem;
+}
+
 .sobre-titulo {
     font-size: 2.5rem;
     color: var(--claro);
@@ -115,8 +119,9 @@ h1 {
 }
 
 .sobre-paragrafo {
-    text-align: center;
-    font-size: 1.1rem;
+    color: ghostwhite;
+    text-align: justify;
+    font-size: 1.0rem;
 }
 
 .projetos {
@@ -242,4 +247,22 @@ h1 {
     50%{
         transform: translateY(-20px);
     }
+}
+
+.tec-titulo {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+}
+
+.tec-caixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.badgers {
+    width: 60px;
+    height:  60px;
+    border: 1px solid var(--escuro);
 }
