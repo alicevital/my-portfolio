@@ -118,6 +118,9 @@ h1 {
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .sobre-paragrafo {
@@ -275,4 +278,30 @@ h1 {
 .badgers {
     width: 60px;
     height:  60px;
+}
+
+.foto-sobre {
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    border-radius: 80px;
+}
+
+.segunda-foto-sobre {
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    border-radius: 90px;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.linha-direita {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
