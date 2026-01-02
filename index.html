@@ -24,6 +24,19 @@
                 <img src="./img/photo_portfolio.jpg" alt="Foto de Alice Vital" class="foto-perfil">
                 <h1>Alice Vital</h1>
                 <p class="subtitulo">Back-End Developer</p>
+
+                <div class="contatos-inicio">
+                    <a href="https://www.linkedin.com/in/alice-nascimento-3821bb2b7/">
+                        <img src="img/icon-linkedin.png" alt="linkedin-logo">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alicevnascimento02@gmail.com">
+                        <img src="img/icon-email.png" alt="email-logo">
+                    </a>
+                    <a href="https://github.com/alicevital">
+                        <img src="img/icon-github.png" alt="github-logo">
+                    </a>
+
+                </div>
         </main>
 
         <section id="sobre" class="sobre">
@@ -86,26 +99,35 @@
             <div class="projetos-caixa">
 
                 <div class="projetos-card">
-                    <img src="projeto3" alt="Projeto 3" class="projetos-imagem">
+                    <img src="projeto3" alt="Projeto 1" class="projetos-imagem">
                     <div class="caixa-texto">
-                    <h3 class="info-projetos">Hack</h3>
-                    <p class="paragrafo-projetos">Texto sobre o projeto hack</p>
+                    <h3 class="info-projetos">TaskFlow</h3>
+                    <p class="paragrafo-projetos">Um sistema web de gerenciamento de tarefas em tempo real, desenvolvido com FastAPI,
+                        WebSockets, MongoDB e Docker. Permite organizar atividades,
+                        acompanhar atualizações instantâneas e manter um fluxo de trabalho eficiente.</p>
+                        <a href="https://github.com/alicevital/taskflow-project.git" target="_blank">Ver repositório do TaskFlow</a>
+                    </div>
+                </div>
+
+                <div class="projetos-card">
+                    <img src="projeto3" alt="Projeto 2" class="projetos-imagem">
+                    <div class="caixa-texto">
+                    <h3 class="info-projetos">Turn Arena</h3>
+                    <p class="paragrafo-projetos">Um jogo de turnos web onde o usuário escolhe um herói e 
+                        enfrenta inimigos. Criado com Python, FastAPI e MongoDB,
+                        o sistema registra usuários e vitórias, entregando uma experiência simples e divertida.</p>
+                        <a href="https://github.com/alicevital/turn-arena.git" target="_blank">Ver repositório do turn game</a>
+
                     </div>
                 </div>
 
                 <div class="projetos-card">
                     <img src="projeto3" alt="Projeto 3" class="projetos-imagem">
                     <div class="caixa-texto">
-                    <h3 class="info-projetos">Hack</h3>
-                    <p class="paragrafo-projetos">Texto sobre o projeto hack</p>
-                    </div>
-                </div>
-
-                <div class="projetos-card">
-                    <img src="projeto3" alt="Projeto 3" class="projetos-imagem">
-                    <div class="caixa-texto">
-                    <h3 class="info-projetos">Hack</h3>
-                    <p class="paragrafo-projetos">Texto sobre o projeto hack</p>
+                    <h3 class="info-projetos">Mines-Back</h3>
+                    <p class="paragrafo-projetos">Backend do jogo Mines, inspirado em jogos de cassino. Feito com FastAPI, WebSockets, RabbitMQ e Docker, 
+                        possibilita apostas, valida jogadas em tempo real e garante desempenho robusto, com hospedagem no Render.</p>
+                        <a href="https://github.com/alicevital/Mines-Back.git" target="_blank">Ver repositório do Mines-Back</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +135,9 @@
 
         <section id="contatos" class="contatos">
 
-            <h2 class="contatos-titulo">Entre em contato :D</h2>
+            <h2 class="contatos-titulo">Entre em contato!</h2>
+
+            <div></div>
 
             <form action="" class="formulario-contato" id="formulario" onsubmit="enviarMensagem(event)">
 
@@ -138,8 +162,8 @@
             event.preventDefault()
 
             const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem');
-            const telefone = '5581995626415'
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5581998740555'
             const texto = `Olá! Me chamo ${nome}, ${mensagem}`
             const msgformatada = encodeURIComponent(texto)
             const url = `https://wa.me/${telefone}?text=${msgformatada}`
