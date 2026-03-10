@@ -83,14 +83,26 @@ body {
 h1 {
     font-size: 3.0rem;
     font-weight: bold;
-    margin: 18px;
+    margin: 5px 0;
     color: #fff;
+    transition: all 0.4s ease;
+}
 
+h1:hover {
+    transform: scale(1.08);
+    text-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
 }
 
 .subtitulo {
     font-size: 2rem;
     color: #ccc;
+    transition: all 0.4s ease;
+}
+
+.subtitulo:hover {
+    transform: scale(1.05);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
 }
 
 .sobre {
@@ -274,10 +286,43 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
 }
 .badgers {
     width: 60px;
     height:  60px;
+    transition: transform 0.3s ease;
+}
+
+.tec-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tec-item:hover .badgers {
+    transform: scale(1.2);
+}
+
+.tec-nome {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.8rem;
+    color: var(--claro);
+    background: rgba(0,0,0,0.6);
+    padding: 3px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.tec-item:hover .tec-nome {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .foto-sobre {
@@ -285,6 +330,7 @@ h1 {
     height: 150px;
     border: 2px solid;
     border-radius: 80px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .segunda-foto-sobre {
@@ -292,6 +338,13 @@ h1 {
     height: 150px;
     border: 2px solid;
     border-radius: 90px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.foto-sobre:hover,
+.segunda-foto-sobre:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.5);
 }
 
 .linha {
@@ -309,7 +362,7 @@ h1 {
 .contatos-inicio {
     display: flex;
     gap: 10px;    
-    margin-top: 8px;
+    margin-top: 2px;
 }
 
 .contatos-inicio img {
@@ -323,4 +376,67 @@ h1 {
 .contatos-inicio img:hover {
     transform: scale(1.1);
     opacity: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.sobre-titulo,
+.projetos-titulo,
+.tec-titulo,
+.contatos-titulo {
+
+    background: linear-gradient(
+        90deg,
+        rgb(197, 224, 255),
+        rgb(17, 92, 255),
+        rgb(206, 0, 154)
+    );
+
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradientMove 5s ease infinite;
+}
+
+.botao-cv {
+    margin-top: 2px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    font-style: italic;
+}
+
+.botao-cv:hover {
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.botao-cv::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.3s ease;
+}
+
+.botao-cv:hover::after {
+    width: 100%;
 }
