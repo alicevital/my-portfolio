@@ -22,6 +22,7 @@ html {
 body {
     background-color: var(--escuro);
     color: var(--claro);
+    padding-top: 80px;
 }
 
 .navegacao {
@@ -181,7 +182,7 @@ h1:hover {
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
     overflow: hidden;
-    transition: all 1.2 ease;
+    transition: all 1.2s ease;
     cursor: pointer;
 }
 
@@ -439,4 +440,62 @@ h1:hover {
 
 .botao-cv:hover::after {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    /* MENU */
+    .menu {
+        flex-direction: row; /* mantém lado a lado */
+        flex-wrap: wrap;     /* permite quebrar linha se precisar */
+        gap: 1rem;
+    }
+
+    /* CABEÇALHO */
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* SEÇÕES */
+    .sobre,
+    .tecnologias,
+    .projetos,
+    .contatos {
+        padding: 4rem 1rem;
+    }
+
+    /* LINHAS */
+    .linha,
+    .linha-direita {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* TECNOLOGIAS */
+    .tec-caixa {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* PROJETOS */
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    /* FORM */
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+
 }
