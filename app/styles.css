@@ -10,17 +10,18 @@ html {
 
 }
 
- :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;
-    --maisEscuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+:root {
+    --primaria: #CF291D;        
+    --secundaria: #F5F5F5;      
+    --escuro: #111010;          
+    --maisEscuro: #000000;
+    --claro: #F5F5F5;
+    --cinza: #2E2E30;           
+    --vidro: rgba(255, 255, 255, 0.08);
 }
 
 body {
-    background-color: var(--escuro);
+    background-color: var(--maisEscuro);
     color: var(--claro);
     padding-top: 80px;
 }
@@ -28,11 +29,13 @@ body {
 .navegacao {
     position: fixed;
     top: 0;
-    background: rgb(15, 23, 42, 0.8);
+    background: rgb(0, 0, 0, 0.92);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) ;
 }
+
 
 .menu {
     display: flex;
@@ -75,7 +78,7 @@ body {
 .foto-perfil {
     width: 200px;
     height:  200px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
     border-radius: 20%;
     border: 4px solid var(--vidro);
     animation: flutuar 5s ease-in-out infinite;
@@ -85,13 +88,13 @@ h1 {
     font-size: 3.0rem;
     font-weight: bold;
     margin: 5px 0;
-    color: #fff;
+    color: #ffff;
     transition: all 0.4s ease;
 }
 
 h1:hover {
     transform: scale(1.08);
-    text-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
+    text-shadow: 0 0 8px rgba(207, 41, 29, 0.7);
 }
 
 .subtitulo {
@@ -102,8 +105,8 @@ h1:hover {
 
 .subtitulo:hover {
     transform: scale(1.05);
-    color: #fff;
-    text-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
+    color: #ffff;
+    text-shadow: 0 0 8px rgba(207, 41, 29, 0.7);
 }
 
 .sobre {
@@ -116,7 +119,7 @@ h1:hover {
 
 .sobre-titulo {
     font-size: 2.5rem;
-    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-image: linear-gradient(to right, #f5f5f5, #cf291d, #f5f5f5);
     background-clip: text;
     color: transparent;
     text-align: center;
@@ -156,13 +159,13 @@ h1:hover {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 35px;
-    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-image: linear-gradient(to right, #f5f5f5, #cf291d, #f5f5f5);
     background-clip: text;
     color: transparent;
 }
 
 .projetos-card:hover {
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
     transform: translateY(-10px) scale(1.03);
 }
 
@@ -177,7 +180,7 @@ h1:hover {
     padding: 1.5rem;
 }
 .projetos-card {
-    background-color: #0f172a;
+    background-color: var(--escuro);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
@@ -203,7 +206,7 @@ h1:hover {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 35px;
-    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-image: linear-gradient(to right, #f5f5f5, #cf291d, #f5f5f5);
     background-clip: text;
     color: transparent;
 }
@@ -234,7 +237,7 @@ h1:hover {
 
 .botao-form {
     color: var(--claro);
-    background: linear-gradient(45deg, var(--primaria),var(--escuro), var(--maisEscuro));
+    background: linear-gradient(45deg ,var(--escuro), var(--maisEscuro));
     padding: 1rem 2rem;
     border: none;
     border-radius: 10px;
@@ -246,7 +249,7 @@ h1:hover {
 
 .botao-form:hover {
     transform: translateY(-4px);
-    box-shadow: rgba(79, 70, 229, 0.2);
+    box-shadow: rgba(255, 255, 255, 0.08);
 }
 
 .particulas {
@@ -258,8 +261,8 @@ h1:hover {
     z-index: -1;
     opacity: 0.7;
     background:
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    radial-gradient(circle at 10% 20%, var(--cinza) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--cinza) 0%, transparent 20%),
     var(--maisEscuro)
 }
 
@@ -278,7 +281,7 @@ h1:hover {
     text-align: center;
     font-size: 2.1rem;
     margin-bottom: 35px;
-    background-image: linear-gradient(to right, rgb(206, 0, 154), rgb(0, 247, 255));
+    background-image: linear-gradient(to right, #f5f5f5, #cf291d, #f5f5f5);
     background-clip: text;
     color: transparent;
 }
@@ -345,7 +348,7 @@ h1:hover {
 .foto-sobre:hover,
 .segunda-foto-sobre:hover {
     transform: scale(1.1) rotate(3deg);
-    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.5);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08);
 }
 
 .linha {
@@ -397,10 +400,7 @@ h1:hover {
 .contatos-titulo {
 
     background: linear-gradient(
-        90deg,
-        rgb(197, 224, 255),
-        rgb(17, 92, 255),
-        rgb(206, 0, 154)
+        90deg, #F5F5F5, #CF291D, #969393
     );
 
     background-size: 200% 200%;
@@ -414,7 +414,7 @@ h1:hover {
 .botao-cv {
     margin-top: 2px;
     text-decoration: none;
-    color: #ccc;
+    color: #cccc;
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -423,7 +423,7 @@ h1:hover {
 }
 
 .botao-cv:hover {
-    color: #fff;
+    color: #ffff;
     letter-spacing: 1px;
 }
 
@@ -444,14 +444,12 @@ h1:hover {
 
 @media (max-width: 768px) {
 
-    /* MENU */
     .menu {
-        flex-direction: row; /* mantém lado a lado */
-        flex-wrap: wrap;     /* permite quebrar linha se precisar */
+        flex-direction: row; 
+        flex-wrap: wrap;     
         gap: 1rem;
     }
 
-    /* CABEÇALHO */
     h1 {
         font-size: 2rem;
         text-align: center;
@@ -467,7 +465,6 @@ h1:hover {
         height: 150px;
     }
 
-    /* SEÇÕES */
     .sobre,
     .tecnologias,
     .projetos,
@@ -475,25 +472,21 @@ h1:hover {
         padding: 4rem 1rem;
     }
 
-    /* LINHAS */
     .linha,
     .linha-direita {
         flex-direction: column;
         text-align: center;
     }
 
-    /* TECNOLOGIAS */
     .tec-caixa {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    /* PROJETOS */
     .projetos-caixa {
         grid-template-columns: 1fr;
     }
 
-    /* FORM */
     .formulario-contato {
         padding: 1.5rem;
     }
