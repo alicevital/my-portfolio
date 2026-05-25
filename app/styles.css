@@ -506,6 +506,12 @@ h1:hover {
 }
 
 .footer-copy {
-    color: #ffff;
+    color: #929292;
     font-size: 0.9rem;
+}
+
+.footer-paragrafo {
+    color: #929292;
+    margin-top: 2px;
+    margin-bottom: 8px;
 }
