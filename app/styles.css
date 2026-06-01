@@ -288,11 +288,14 @@ h1:hover {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
+
 .badgers {
     width: 60px;
     height:  60px;
     transition: transform 0.3s ease;
+    margin-top: 20px;
 }
 
 .tec-item {
