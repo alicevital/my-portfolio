@@ -219,7 +219,7 @@
                     <img src="./img/code2.webp" alt="Projeto 5" class="projetos-imagem">
                     <div class="caixa-texto">
                     <h3 class="info-projetos">Matchy</h3>
-                    <p class="paragrafo-projetos">Sistema de recomendação, uma API que sugere conteúdos/produtos com base no comportamento do usuário.</p>
+                    <p class="paragrafo-projetos">Sistema de recomendação, uma API que sugere conteúdos/produtos com base no comportamento do usuário.(em andamento)</p>
                         <a href="https://github.com/alicevital/matchy" target="_blank">ver repositório do Matchy</a>
                     </div>
                 </div>
@@ -236,21 +236,66 @@
             </div>
         </section>
 
+
         <section id="eventos" class="eventos">
+    <h2 class="eventos-titulo">Eventos</h2>
 
-            <h2 class="eventos-titulo">Eventos</h2>
+    <p class="eventos-descricao">
+    Além de desenvolver projetos, gosto de participar de eventos de tecnologia, inovação e comunidades dev. Esses encontros me permitem acompanhar tendências do mercado, ampliar minha rede de contatos e compartilhar experiências com outros profissionais da área.
+    </p>
 
-            <div class="eventos-caixa">
+    <div class="eventos-slider">
 
-                <p>Cesar Beat</p>
+        <button class="seta-evento seta-esquerda" onclick="mudarEvento(-1)">&#10094;</button>
 
-                <p>Tech Woman</p>
-
-                <p>Rec'nplay</p>
-
+        <div class="evento-card ativo">
+            <div class="evento-fotos">
+                <img src="./img/cesar-beat1.jpg" class="foto-evento ativa">
+                <img src="./img/cesar-beat2.jpg" class="foto-evento">
             </div>
 
-        </section>
+            <div class="evento-texto">
+                <h3>Cesar Beat - 2026</h3>
+                <p>Participar do CESAR BEAT, evento que deu início às comemorações dos 30 anos do CESAR em Recife,
+                foi uma experiência incrível. Para mim, foi uma grande oportunidade de fazer networking e conhecer pessoas da área. No campo do conhecimento, a
+                 palestra "LLMs como Assistentes de Engenharia Seguros: DevSecOps e defesa cibernética na prática" foi imperdível, mostrando de forma muito prática como a inteligência artificial
+                 pode atuar como uma aliada poderosa e segura no desenvolvimento de software.</p>
+            </div>
+        </div>
+
+        <div class="evento-card">
+            <div class="evento-fotos">
+                <img src="./img/tech-woman1.jpg" class="foto-evento ativa">
+                <img src="./img/tech-woman2.jpg" class="foto-evento">
+                <img src="./img/tech-woman3.jpg" class="foto-evento">
+            </div>
+
+            <div class="evento-texto">
+                <h3>Tech Woman - 2025</h3>
+                <p>Evento voltado para mulheres na tecnologia. Durante o evento, participei de duas conversas inspiradoras que me fizeram refletir e aprender bastante:
+                    Trilha Carreira: "Quem é a profissional que o mercado busca?" Uma conversa sobre como nos posicionar de forma estratégica,
+                     os valores que mais importam nas contratações hoje e Trilha Técnica: "Decisões de projeto – low code, no code, hard code." Um debate sobre as diferentes abordagens de desenvolvimento.
+                    Foi um evento muito bom, saí motivada a colaborar com outras mulheres da área e crescer ainda mais profissionalmente.</p>
+            </div>
+        </div>
+
+    <!--     <div class="evento-card">
+            <div class="evento-fotos">
+                <img src="./img/recnplay-1.jpg" class="foto-evento ativa">
+                <img src="./img/recnplay-2.jpg" class="foto-evento">
+                <img src="./img/recnplay-3.jpg" class="foto-evento">
+            </div>
+
+            <div class="evento-texto">
+                <h3>Rec'n'Play</h3>
+                <p>Participação em um dos maiores eventos de tecnologia, criatividade e inovação do Recife.</p>
+            </div>
+        </div> -->
+
+        <button class="seta-evento seta-direita" onclick="mudarEvento(1)">&#10095;</button>
+
+    </div>
+</section>
 
         <section id="contatos" class="contatos">
 
