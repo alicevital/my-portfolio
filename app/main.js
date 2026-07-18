@@ -195,3 +195,32 @@ window.addEventListener("beforeunload", () => {
         efeitoVanta.destroy();
     }
 });
+
+const secoes = document.querySelectorAll("main[id], section[id]");
+const linksMenu = document.querySelectorAll(".menu-link");
+
+const observerMenu = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const idSecao = entry.target.getAttribute("id");
+
+                linksMenu.forEach((link) => {
+                    link.classList.remove("ativo");
+
+                    const href = link.getAttribute("href");
+                    if (href === `#${idSecao}`) {
+                        link.classList.add("ativo");
+                    }
+                });
+            }
+        });
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+secoes.forEach((secao) => {
+    observerMenu.observe(secao);
+});

@@ -57,25 +57,42 @@ a:hover {
 }
 
 .menu-link {
-    text-decoration: none;
-    color: var(--claro);
-    font-weight: 500;
+    display: inline-block;
     position: relative;
     padding: 0.5rem;
+    color: var(--claro);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .menu-link::after {
-    content: '';
-    height: 2px;
-    width: 0;
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+
+    width: 0;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primaria),
+        var(--secundaria)
+    );
+
     transition: width 0.5s ease;
 }
 
-.menu-link:hover::after {
+/* Ao passar o mouse ou quando a seção estiver ativa */
+
+.menu-link:hover,
+.menu-link.ativo {
+    color: var(--primaria);
+}
+
+.menu-link:hover::after,
+.menu-link.ativo::after {
     width: 100%;
 }
 
