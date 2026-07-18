@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,16 +19,16 @@
                 <li><a href="#tecnologias" class="menu-link">Tecnologias</a></li>
                 <li><a href="#projetos" class="menu-link">Projetos</a></li>
                 <li><a href="#eventos" class="menu-link">Eventos</a></li>
-                <li><a href="#footerid" class="menu-link">Contatos</a></li>
+                <li><a href="#contatos" class="menu-link">Contatos</a></li>
             </ul>
         </nav>
 
         <main id="inicio" class="cabecalho">
                 <img src="./img/photo_portfolio.jpg" alt="Foto de Alice Vital" class="foto-perfil">
                 <h1>Alice Vital</h1>
-                <p class="subtitulo">Back-End Developer</p>
+                <p class="subtitulo">Software Developer</p>
 
-                <a href="./cv/Alice Nascimento-Python Junior.pdf" download class="botao-cv">
+                <a href="./cv/Alice Nascimento-Backend Developer.pdf" download class="botao-cv">
                     Baixar currículo
                 </a>
         </main>
@@ -37,7 +41,7 @@
                 <img src="./img/photo_formatura.JPG" alt="foto-formatura" class="foto-sobre">
                 <p class="sobre-paragrafo">
                     Oi! Meu nome é Alice e sou formada no curso de Análise e Desenvolvimento de Sistemas. Gosto muito da área da tecnologia desde quando era criança e isso me motivou a estudar bastante sobre diversas ramificações da área.
-                    Tenho experiencia com Desenvolvimento Backend de Jogos onde pude aplicar tecnologias como FastAPI, persistência de dados com MongoDB, RabbitMQ e Redis, versionamento de código e conteinerização com Docker.  
+                    Tenho experiencia com Desenvolvimento Backend onde pude aplicar tecnologias como Python, FastAPI, persistência de dados com MongoDB, autenticação com JWT, RabbitMQ, Redis para cache, versionamento de código e conteinerização com Docker.  
                 </p>
             </div>
 
@@ -51,8 +55,8 @@
 
             <div class="linha-direita">
                 <p class="sobre-paragrafo">
-                   Atualmente, desenvolvo projetos pessoais com foco em aprimorar meus conhecimentos em programação Backend.
-                   Tenho me dedicado ao estudo e aplicação prática buscando construir soluções mais robustas, escaláveis e bem estruturadas. 
+                   Atualmente, desenvolvo projetos pessoais com foco em aprimorar meus conhecimentos na programação. Tenho estudado a linguagem Ruby e seu framework Ruby on Rails, também tenho bastante interesse em atuar com JavaScript e TypeScript, tanto no backend como no frontend.
+                   Me dedico aos estudos e aplicações práticas buscando construir soluções mais robustas, escaláveis e bem estruturadas. 
                 </p>
                 <img src="./img/photo-code.jpg" alt="foto-computador" class="segunda-foto-sobre">
             </div>
@@ -61,7 +65,9 @@
 
 <section id="tecnologias" class="tecnologias">
 
+
     <h3 class="tec-titulo">Tecnologias & Ferramentas</h3>
+    
     <div class="tec-caixa">
 
         <div class="tec-item">
@@ -158,6 +164,8 @@
 
         <section id="projetos" class="projetos">
 
+            <div class="binary-background" aria-hidden="true"></div>
+
             <h2 class="projetos-titulo">Meus projetos</h2>
 
             <div class="projetos-caixa">
@@ -230,8 +238,8 @@
                     <img src="./img/realtime_chat.png" alt="Projeto 7" class="projetos-imagem">
                     <div class="caixa-texto">
                     <h3 class="info-projetos">Realtime Chat</h3>
-                    <p class="paragrafo-projetos">Backend de chat em tempo real com FastAPI, websockets para gerenciar as conexões dos usuários, JWT para autenticação dos usuários, conteinerização com Docker e persistência dos dados com Mongodb. Esse projeto foi de 
-                        senvolvido com mais 2 integrantes, o fluxo de trabalho foi acompanhado pelo Jira, para facilitar a comunicação e o trabalho em equipe.
+                    <p class="paragrafo-projetos">Backend de chat em tempo real com FastAPI, websockets para gerenciar as conexões dos usuários, JWT para autenticação dos usuários, conteinerização com Docker e persistência dos dados com Mongodb. Esse projeto foi 
+                        desenvolvido com mais 2 integrantes, o fluxo de trabalho foi acompanhado pelo Jira, para facilitar a comunicação e o trabalho em equipe.
                     </p>
                         <a href="https://github.com/alicevital/chat_project.git" target="_blank"> ver repositório do Realtime Chat</a>
                     </div>
@@ -354,6 +362,16 @@
 
 </footer>
 
+    <!-- Biblioteca necessária para o Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Fundo 3D Vanta.NET -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+
+    <!-- Animações durante a rolagem -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- JavaScript do portfólio -->
     <script src="main.js"></script>
 
 </body>

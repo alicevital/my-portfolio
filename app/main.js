@@ -45,3 +45,213 @@ setInterval(() => {
 
     fotos[fotoAtual].classList.add("ativa");
 }, 2000);
+
+/* ==================================================
+   PREFERÊNCIA DE MOVIMENTO
+================================================== */
+
+const prefereMenosMovimento = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+
+/* ==================================================
+   FUNDO 3D COM VANTA.NET
+================================================== */
+
+let efeitoVanta = null;
+
+if (
+    !prefereMenosMovimento &&
+    window.VANTA &&
+    window.VANTA.NET
+) {
+    efeitoVanta = window.VANTA.NET({
+        el: "#inicio",
+
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+
+        minHeight: 200,
+        minWidth: 200,
+
+        scale: 1,
+        scaleMobile: 1,
+
+        color: 0xcf291d,
+        backgroundColor: 0x000000,
+
+        points: 6,
+        maxDistance: 18,
+        spacing: 18,
+
+        showDots: true
+    });
+}
+
+
+/* ==================================================
+   ELEMENTOS APARECENDO DURANTE A ROLAGEM
+================================================== */
+
+function configurarAnimacao(
+    seletor,
+    animacao,
+    atraso = 0
+) {
+    const elementos = document.querySelectorAll(seletor);
+
+    elementos.forEach((elemento, indice) => {
+        elemento.setAttribute("data-aos", animacao);
+
+        if (atraso > 0) {
+            const atrasoCalculado = (indice % 10) * atraso;
+
+            elemento.setAttribute(
+                "data-aos-delay",
+                String(atrasoCalculado)
+            );
+        }
+    });
+}
+
+
+/* Títulos das seções */
+
+configurarAnimacao(
+    ".sobre-titulo, " +
+    ".tec-titulo, " +
+    ".projetos-titulo, " +
+    ".eventos-titulo, " +
+    ".contatos-titulo",
+    "fade-up"
+);
+
+
+/* Blocos principais */
+
+configurarAnimacao(
+    ".sobre-caixa, " +
+    ".eventos-descricao, " +
+    ".eventos-slider, " +
+    ".formulario-contato",
+    "fade-up"
+);
+
+
+/* Tecnologias aparecem gradualmente */
+
+configurarAnimacao(
+    ".tec-item",
+    "zoom-in",
+    50
+);
+
+
+/*
+Usamos apenas fade nos projetos para não interferir
+no movimento de hover que seus cards já possuem.
+*/
+
+configurarAnimacao(
+    ".projetos-card",
+    "fade",
+    100
+);
+
+
+/* Rodapé */
+
+configurarAnimacao(
+    ".footer-paragrafo, .footer-links",
+    "fade-up"
+);
+
+
+/* Inicialização do AOS */
+
+if (window.AOS) {
+    window.AOS.init({
+        duration: 700,
+        easing: "ease-out-cubic",
+        offset: 60,
+
+        /* Cada elemento anima apenas uma vez */
+        once: true,
+
+        /* Não faz a animação reversa ao subir a página */
+        mirror: false,
+
+        disable: prefereMenosMovimento
+    });
+}
+
+
+/* Limpeza do efeito quando a página for fechada */
+
+window.addEventListener("beforeunload", () => {
+    if (efeitoVanta) {
+        efeitoVanta.destroy();
+    }
+});
+
+const secoes = document.querySelectorAll("main[id], section[id]");
+const linksMenu = document.querySelectorAll(".menu-link");
+
+const observerMenu = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const idSecao = entry.target.getAttribute("id");
+
+                linksMenu.forEach((link) => {
+                    link.classList.remove("ativo");
+
+                    const href = link.getAttribute("href");
+                    if (href === `#${idSecao}`) {
+                        link.classList.add("ativo");
+                    }
+                });
+            }
+        });
+    },
+    {
+        threshold: 0.5
+    }
+);
+
+secoes.forEach((secao) => {
+    observerMenu.observe(secao);
+});
+
+function criarBackgroundBinario() {
+    const container = document.querySelector(".binary-background");
+
+    if (!container) return;
+
+    const quantidade = 35;
+
+    for (let i = 0; i < quantidade; i++) {
+        const item = document.createElement("span");
+
+        const tamanhoLinha = Math.floor(Math.random() * 12) + 8;
+        let texto = "";
+
+        for (let j = 0; j < tamanhoLinha; j++) {
+            texto += Math.random() > 0.5 ? "1" : "0";
+        }
+
+        item.textContent = texto;
+
+        item.style.left = `${Math.random() * 100}%`;
+        item.style.top = `${Math.random() * 100}%`;
+        item.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
+        item.style.animationDuration = `${Math.random() * 8 + 8}s`;
+        item.style.animationDelay = `${Math.random() * 5}s`;
+
+        container.appendChild(item);
+    }
+}
+
+criarBackgroundBinario();
