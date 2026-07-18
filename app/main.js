@@ -224,3 +224,34 @@ const observerMenu = new IntersectionObserver(
 secoes.forEach((secao) => {
     observerMenu.observe(secao);
 });
+
+function criarBackgroundBinario() {
+    const container = document.querySelector(".binary-background");
+
+    if (!container) return;
+
+    const quantidade = 35;
+
+    for (let i = 0; i < quantidade; i++) {
+        const item = document.createElement("span");
+
+        const tamanhoLinha = Math.floor(Math.random() * 12) + 8;
+        let texto = "";
+
+        for (let j = 0; j < tamanhoLinha; j++) {
+            texto += Math.random() > 0.5 ? "1" : "0";
+        }
+
+        item.textContent = texto;
+
+        item.style.left = `${Math.random() * 100}%`;
+        item.style.top = `${Math.random() * 100}%`;
+        item.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
+        item.style.animationDuration = `${Math.random() * 8 + 8}s`;
+        item.style.animationDelay = `${Math.random() * 5}s`;
+
+        container.appendChild(item);
+    }
+}
+
+criarBackgroundBinario();
