@@ -651,3 +651,65 @@ h1:hover {
     margin-top: 2px;
     margin-bottom: 8px;
 }
+
+/* ==================================================
+   FUNDO 3D — VANTA.JS
+================================================== */
+
+.cabecalho {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #000000;
+}
+
+/*
+Mantém foto, nome, subtítulo e botão acima
+do canvas criado pelo Vanta.
+*/
+.cabecalho > *:not(.vanta-canvas) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Canvas criado automaticamente pelo Vanta.js */
+.cabecalho .vanta-canvas {
+    z-index: 0 !important;
+}
+
+/*
+Camada escura para as linhas do fundo não
+atrapalharem a leitura do conteúdo.
+*/
+.cabecalho::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.25) 55%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+}
+
+/* Respeita usuários que preferem menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .foto-perfil {
+        animation: none;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
